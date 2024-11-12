@@ -1,0 +1,7 @@
+google-cloud-storage
+python-dotenv
+docling
+pymupdf
+sentence-transformers
+pinecone-client
+apache-airflow
