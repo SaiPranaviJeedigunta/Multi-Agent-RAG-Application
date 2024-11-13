@@ -177,8 +177,7 @@ def process_and_save_pdfs():
     for file_path in file_paths:
         process_pdf(file_path)
 
-def process_and_upload_content():
-    # Imports
+def process_and_upload_to_pinecone():
     import os
     import json
     import glob
@@ -190,50 +189,66 @@ def process_and_upload_content():
     from sentence_transformers import SentenceTransformer
     from transformers import CLIPProcessor, CLIPModel
     from PIL import Image
+    import pytesseract
     import torch
-    
+    import platform
+
+
+    os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
+    # Set the Tesseract path from the environment variable
+    tesseract_path = os.getenv("TESSERACT_PATH")
+    if tesseract_path:
+        pytesseract.pytesseract.tesseract_cmd = tesseract_path
+    else:
+        raise EnvironmentError("TESSERACT_PATH is not set in .env")
+
     # Set up logging
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-    
+
     # Load environment variables
     load_dotenv()
-    
+
     # Initialize Pinecone with environment variables
     pinecone_api_key = os.getenv("PINECONE_API_KEY")
     pinecone_env = "us-east-1"
     pc = Pinecone(api_key=pinecone_api_key)
-    
+
     # Define Pinecone index parameters
-    index_name = "enhanced-publications-index"
+    index_name = "research-publications-index"
     embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
     embedding_dimension = embedding_model.get_sentence_embedding_dimension()
-    
+
     # Initialize CLIP model and processor for image embeddings
     clip_model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
     clip_processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
     clip_embedding_dim = clip_model.config.projection_dim
-    
-    # Create the Pinecone index if it doesn't already exist
-    if index_name not in pc.list_indexes().names():
-        logging.info(f"Creating Pinecone index: {index_name}")
-        pc.create_index(
-            name=index_name,
-            dimension=embedding_dimension,
-            metric='cosine',
-            spec=ServerlessSpec(cloud='aws', region=pinecone_env)
-        )
-    
+
+    # Check if index exists, delete if it does
+    if index_name in pc.list_indexes().names():
+        logging.info(f"Index '{index_name}' already exists. Deleting the existing index.")
+        pc.delete_index(index_name)
+
+    # Create the Pinecone index
+    logging.info(f"Creating Pinecone index: {index_name}")
+    pc.create_index(
+        name=index_name,
+        dimension=embedding_dimension,
+        metric='cosine',
+        spec=ServerlessSpec(cloud='aws', region=pinecone_env)
+    )
+
     # Connect to the index
     index = pc.Index(index_name)
     logging.info(f"Connected to Pinecone index: {index_name}")
-    
+
     # Path to the directory with parsed content
     parsed_content_dir = "parsed_content"
-    
+
     # Function to chunk text into smaller parts if it exceeds max token length
     def chunk_text(text, max_length=512):
         return [text[i:i+max_length] for i in range(0, len(text), max_length)]
-    
+
     # Step 1: Process each JSON file containing chunked text data
     for json_file_path in glob.glob(os.path.join(parsed_content_dir, "*_chunks.json")):
         with open(json_file_path, 'r') as f:
@@ -265,60 +280,84 @@ def process_and_upload_content():
                 
                 except Exception as e:
                     logging.error(f"Failed to process text chunk in {json_file_path}: {e}")
-    
-    # Step 2: Embed and upload table data with pdf_filename reference
+
+    # Step 2: Embed and upload each table row with pdf_filename reference
     for table_csv_path in glob.glob(os.path.join(parsed_content_dir, "*-table-*.csv")):
         try:
             doc_filename = Path(table_csv_path).stem.split('-table')[0]
             
-            # Read table data and embed
-            table_data = pd.read_csv(table_csv_path).to_string()
-            table_embedding = embedding_model.encode(table_data).tolist()
+            # Read the table data
+            table_data = pd.read_csv(table_csv_path)
             
-            # Create metadata for table
-            metadata = {
-                "document": doc_filename,
-                "type": "table",
-                "filename": os.path.basename(table_csv_path),
-                "pdf_filename": f"{doc_filename}.pdf"
-            }
-            
-            # Upsert table data into Pinecone
-            index.upsert([(f"{doc_filename}_table", table_embedding, metadata)])
-            logging.info(f"Uploaded table data from '{table_csv_path}'")
+            # Iterate over each row in the table
+            for row_idx, row in table_data.iterrows():
+                row_data = row.to_string()
+                row_embedding = embedding_model.encode(row_data).tolist()
+                
+                # Metadata for each row
+                row_metadata = {
+                    "document": doc_filename,
+                    "type": "table_row",
+                    "row_index": row_idx,
+                    "filename": os.path.basename(table_csv_path),
+                    "pdf_filename": f"{doc_filename}.pdf"
+                }
+                
+                # Upsert row data into Pinecone
+                index.upsert([(f"{doc_filename}_table_row_{row_idx}", row_embedding, row_metadata)])
+                logging.info(f"Uploaded row {row_idx} of table from '{table_csv_path}'")
         
         except Exception as e:
             logging.error(f"Failed to process table file {table_csv_path}: {e}")
-    
-    # Step 3: Embed and upload images with pdf_filename reference using CLIP embeddings
+
+    # Step 3: Extract text from images, embed, and upload to Pinecone
     for image_path in glob.glob(os.path.join(parsed_content_dir, "*-page-*.png")) + glob.glob(os.path.join(parsed_content_dir, "*-picture-*.png")):
         try:
             doc_filename = Path(image_path).stem.split('-page')[0].split('-picture')[0]
             
             # Load and preprocess image for CLIP
             image = Image.open(image_path)
+
+            # Extract text from image using OCR
+            extracted_text = pytesseract.image_to_string(image)
+            logging.info(f"Extracted text from image '{image_path}': {extracted_text[:100]}...")
+
+            # Embed extracted text using the embedding model
+            if extracted_text.strip():
+                text_embedding = embedding_model.encode(extracted_text).tolist()
+                text_metadata = {
+                    "document": doc_filename,
+                    "type": "image_text",
+                    "filename": os.path.basename(image_path),
+                    "pdf_filename": f"{doc_filename}.pdf"
+                }
+                # Upload extracted text embedding to Pinecone
+                index.upsert([(f"{doc_filename}_{Path(image_path).stem}_text", text_embedding, text_metadata)])
+                logging.info(f"Uploaded extracted text from image '{image_path}'")
+
+            # Create image embedding with CLIP
             inputs = clip_processor(images=image, return_tensors="pt")
             with torch.no_grad():
                 image_embedding = clip_model.get_image_features(**inputs).squeeze().tolist()
-            
+
             # Truncate the image embedding to match text embedding dimension
             truncated_image_embedding = image_embedding[:embedding_dimension]
             
             # Image metadata
-            metadata = {
+            image_metadata = {
                 "document": doc_filename,
                 "type": "image",
                 "filename": os.path.basename(image_path),
                 "pdf_filename": f"{doc_filename}.pdf"
             }
             
-            # Upsert image data into Pinecone
-            index.upsert([(f"{doc_filename}_{Path(image_path).stem}", truncated_image_embedding, metadata)])
+            # Upload image data into Pinecone
+            index.upsert([(f"{doc_filename}_{Path(image_path).stem}", truncated_image_embedding, image_metadata)])
             logging.info(f"Uploaded image data for '{image_path}'")
         
         except Exception as e:
             logging.error(f"Failed to process image file {image_path}: {e}")
-    
+
     logging.info("Data successfully embedded and uploaded to Pinecone.")
 
 # Define the DAG
@@ -342,7 +381,7 @@ with DAG(
 
     pineconeupload_task = PythonOperator(
         task_id='pineconeupload_task',
-        python_callable=process_and_upload_content
+        python_callable=process_and_upload_to_pinecone
     )
     # Set task dependencies
     download_publications >> parse_task >> pineconeupload_task
