@@ -1,0 +1,1112 @@
+2024-11-15 12:50:38,855 - fastapi - INFO - All required dependencies are installed
+2024-11-15 12:50:38,855 - fastapi - INFO - All required dependencies are installed
+2024-11-15 12:50:38,857 - fastapi - INFO - Starting Research API Server...
+2024-11-15 12:50:38,857 - fastapi - INFO - Starting Research API Server...
+2024-11-15 12:50:38,857 - fastapi - INFO - Starting imports...
+2024-11-15 12:50:38,857 - fastapi - INFO - Starting imports...
+2024-11-15 12:50:38,892 - fastapi - INFO - Models imported successfully
+2024-11-15 12:50:38,892 - fastapi - INFO - Models imported successfully
+2024-11-15 12:50:38,893 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 12:50:38,893 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 12:50:38,974 - api.core.config - INFO - Environment configuration loaded successfully
+2024-11-15 12:50:38,988 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-15 12:50:38,989 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-15 12:50:39,393 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-15 12:50:39,437 - api.core.session_manager - INFO - Initializing Research Session Manager...
+2024-11-15 12:50:44,549 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 12:50:44,551 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 12:50:44,551 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 12:50:44,820 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 12:50:44,822 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 12:50:44,822 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 12:50:44,822 - fastapi - INFO - Importing service components...
+2024-11-15 12:50:44,822 - fastapi - INFO - Importing service components...
+2024-11-15 12:50:47,355 - api.service - INFO - GCS client initialized successfully
+2024-11-15 12:50:47,361 - fastapi - INFO - Service functions imported successfully
+2024-11-15 12:50:47,361 - fastapi - INFO - Service functions imported successfully
+2024-11-15 12:50:47,362 - fastapi - INFO - Importing main app...
+2024-11-15 12:50:47,362 - fastapi - INFO - Importing main app...
+2024-11-15 12:50:50,465 - fastapi - ERROR - Failed to start server: No module named 'jiter.jiter'
+2024-11-15 12:50:50,465 - fastapi - ERROR - Failed to start server: No module named 'jiter.jiter'
+2024-11-15 12:50:50,466 - fastapi - ERROR - Error type: <class 'ModuleNotFoundError'>
+2024-11-15 12:50:50,466 - fastapi - ERROR - Error type: <class 'ModuleNotFoundError'>
+2024-11-15 12:50:50,468 - fastapi - ERROR - Error location: C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py
+2024-11-15 12:50:50,468 - fastapi - ERROR - Error location: C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py
+2024-11-15 12:50:50,468 - fastapi - ERROR - Error line: 92
+2024-11-15 12:50:50,468 - fastapi - ERROR - Error line: 92
+2024-11-15 12:50:50,469 - fastapi - ERROR - Full traceback:
+2024-11-15 12:50:50,469 - fastapi - ERROR - Full traceback:
+2024-11-15 12:50:50,499 - fastapi - ERROR - Traceback (most recent call last):
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py", line 92, in main
+    from api.main import app
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\main.py", line 2, in <module>
+    from .routers import router  # Update relative import
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\routers.py", line 6, in <module>
+    from .graphs.research_graph import research_graph
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\graphs\research_graph.py", line 5, in <module>
+    from langchain_openai import ChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\__init__.py", line 1, in <module>
+    from langchain_openai.chat_models import AzureChatOpenAI, ChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\__init__.py", line 1, in <module>
+    from langchain_openai.chat_models.azure import AzureChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\azure.py", line 23, in <module>
+    import openai
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\__init__.py", line 11, in <module>
+    from ._client import Client, OpenAI, Stream, Timeout, Transport, AsyncClient, AsyncOpenAI, AsyncStream, RequestOptions
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\_client.py", line 11, in <module>
+    from . import resources, _exceptions
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\__init__.py", line 3, in <module>
+    from .beta import (
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\__init__.py", line 3, in <module>
+    from .beta import (
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\beta.py", line 14, in <module>
+    from .chat.chat import Chat, AsyncChat
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\chat\__init__.py", line 3, in <module>
+    from .chat import Chat, AsyncChat
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\chat\chat.py", line 6, in <module>
+    from .completions import Completions, AsyncCompletions
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\chat\completions.py", line 27, in <module>
+    from ....lib.streaming.chat import ChatCompletionStreamManager, AsyncChatCompletionStreamManager
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\lib\streaming\chat\__init__.py", line 21, in <module>
+    from ._completions import (
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\lib\streaming\chat\_completions.py", line 8, in <module>
+    from jiter import from_json
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\jiter\__init__.py", line 1, in <module>
+    from .jiter import *
+ModuleNotFoundError: No module named 'jiter.jiter'
+
+2024-11-15 12:50:50,499 - fastapi - ERROR - Traceback (most recent call last):
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py", line 92, in main
+    from api.main import app
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\main.py", line 2, in <module>
+    from .routers import router  # Update relative import
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\routers.py", line 6, in <module>
+    from .graphs.research_graph import research_graph
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\graphs\research_graph.py", line 5, in <module>
+    from langchain_openai import ChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\__init__.py", line 1, in <module>
+    from langchain_openai.chat_models import AzureChatOpenAI, ChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\__init__.py", line 1, in <module>
+    from langchain_openai.chat_models.azure import AzureChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\azure.py", line 23, in <module>
+    import openai
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\__init__.py", line 11, in <module>
+    from ._client import Client, OpenAI, Stream, Timeout, Transport, AsyncClient, AsyncOpenAI, AsyncStream, RequestOptions
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\_client.py", line 11, in <module>
+    from . import resources, _exceptions
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\__init__.py", line 3, in <module>
+    from .beta import (
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\__init__.py", line 3, in <module>
+    from .beta import (
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\beta.py", line 14, in <module>
+    from .chat.chat import Chat, AsyncChat
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\chat\__init__.py", line 3, in <module>
+    from .chat import Chat, AsyncChat
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\chat\chat.py", line 6, in <module>
+    from .completions import Completions, AsyncCompletions
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\chat\completions.py", line 27, in <module>
+    from ....lib.streaming.chat import ChatCompletionStreamManager, AsyncChatCompletionStreamManager
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\lib\streaming\chat\__init__.py", line 21, in <module>
+    from ._completions import (
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\lib\streaming\chat\_completions.py", line 8, in <module>
+    from jiter import from_json
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\jiter\__init__.py", line 1, in <module>
+    from .jiter import *
+ModuleNotFoundError: No module named 'jiter.jiter'
+
+2024-11-15 12:52:15,496 - fastapi - INFO - All required dependencies are installed
+2024-11-15 12:52:15,496 - fastapi - INFO - All required dependencies are installed
+2024-11-15 12:52:15,498 - fastapi - INFO - Starting Research API Server...
+2024-11-15 12:52:15,498 - fastapi - INFO - Starting Research API Server...
+2024-11-15 12:52:15,499 - fastapi - INFO - Starting imports...
+2024-11-15 12:52:15,499 - fastapi - INFO - Starting imports...
+2024-11-15 12:52:15,507 - fastapi - INFO - Models imported successfully
+2024-11-15 12:52:15,507 - fastapi - INFO - Models imported successfully
+2024-11-15 12:52:15,507 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 12:52:15,507 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 12:52:15,517 - api.core.config - INFO - Environment configuration loaded successfully
+2024-11-15 12:52:15,521 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-15 12:52:15,522 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-15 12:52:15,546 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-15 12:52:15,554 - api.core.session_manager - INFO - Initializing Research Session Manager...
+2024-11-15 12:52:17,999 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 12:52:17,999 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 12:52:17,999 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 12:52:18,135 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 12:52:18,136 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 12:52:18,136 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 12:52:18,136 - fastapi - INFO - Importing service components...
+2024-11-15 12:52:18,136 - fastapi - INFO - Importing service components...
+2024-11-15 12:52:18,700 - api.service - INFO - GCS client initialized successfully
+2024-11-15 12:52:18,706 - fastapi - INFO - Service functions imported successfully
+2024-11-15 12:52:18,706 - fastapi - INFO - Service functions imported successfully
+2024-11-15 12:52:18,707 - fastapi - INFO - Importing main app...
+2024-11-15 12:52:18,707 - fastapi - INFO - Importing main app...
+2024-11-15 12:52:19,054 - fastapi - ERROR - Failed to start server: No module named 'jiter.jiter'
+2024-11-15 12:52:19,054 - fastapi - ERROR - Failed to start server: No module named 'jiter.jiter'
+2024-11-15 12:52:19,055 - fastapi - ERROR - Error type: <class 'ModuleNotFoundError'>
+2024-11-15 12:52:19,055 - fastapi - ERROR - Error type: <class 'ModuleNotFoundError'>
+2024-11-15 12:52:19,056 - fastapi - ERROR - Error location: C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py
+2024-11-15 12:52:19,056 - fastapi - ERROR - Error location: C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py
+2024-11-15 12:52:19,056 - fastapi - ERROR - Error line: 92
+2024-11-15 12:52:19,056 - fastapi - ERROR - Error line: 92
+2024-11-15 12:52:19,057 - fastapi - ERROR - Full traceback:
+2024-11-15 12:52:19,057 - fastapi - ERROR - Full traceback:
+2024-11-15 12:52:19,060 - fastapi - ERROR - Traceback (most recent call last):
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py", line 92, in main
+    from api.main import app
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\main.py", line 2, in <module>
+    from .routers import router  # Update relative import
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\routers.py", line 6, in <module>
+    from .graphs.research_graph import research_graph
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\graphs\research_graph.py", line 5, in <module>
+    from langchain_openai import ChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\__init__.py", line 1, in <module>
+    from langchain_openai.chat_models import AzureChatOpenAI, ChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\__init__.py", line 1, in <module>
+    from langchain_openai.chat_models.azure import AzureChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\azure.py", line 23, in <module>
+    import openai
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\__init__.py", line 11, in <module>
+    from ._client import Client, OpenAI, Stream, Timeout, Transport, AsyncClient, AsyncOpenAI, AsyncStream, RequestOptions
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\_client.py", line 11, in <module>
+    from . import resources, _exceptions
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\__init__.py", line 3, in <module>
+    from .beta import (
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\__init__.py", line 3, in <module>
+    from .beta import (
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\beta.py", line 14, in <module>
+    from .chat.chat import Chat, AsyncChat
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\chat\__init__.py", line 3, in <module>
+    from .chat import Chat, AsyncChat
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\chat\chat.py", line 6, in <module>
+    from .completions import Completions, AsyncCompletions
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\chat\completions.py", line 27, in <module>
+    from ....lib.streaming.chat import ChatCompletionStreamManager, AsyncChatCompletionStreamManager
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\lib\streaming\chat\__init__.py", line 21, in <module>
+    from ._completions import (
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\lib\streaming\chat\_completions.py", line 8, in <module>
+    from jiter import from_json
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\jiter\__init__.py", line 1, in <module>
+    from .jiter import *
+ModuleNotFoundError: No module named 'jiter.jiter'
+
+2024-11-15 12:52:19,060 - fastapi - ERROR - Traceback (most recent call last):
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py", line 92, in main
+    from api.main import app
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\main.py", line 2, in <module>
+    from .routers import router  # Update relative import
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\routers.py", line 6, in <module>
+    from .graphs.research_graph import research_graph
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\graphs\research_graph.py", line 5, in <module>
+    from langchain_openai import ChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\__init__.py", line 1, in <module>
+    from langchain_openai.chat_models import AzureChatOpenAI, ChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\__init__.py", line 1, in <module>
+    from langchain_openai.chat_models.azure import AzureChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\azure.py", line 23, in <module>
+    import openai
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\__init__.py", line 11, in <module>
+    from ._client import Client, OpenAI, Stream, Timeout, Transport, AsyncClient, AsyncOpenAI, AsyncStream, RequestOptions
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\_client.py", line 11, in <module>
+    from . import resources, _exceptions
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\__init__.py", line 3, in <module>
+    from .beta import (
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\__init__.py", line 3, in <module>
+    from .beta import (
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\beta.py", line 14, in <module>
+    from .chat.chat import Chat, AsyncChat
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\chat\__init__.py", line 3, in <module>
+    from .chat import Chat, AsyncChat
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\chat\chat.py", line 6, in <module>
+    from .completions import Completions, AsyncCompletions
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\resources\beta\chat\completions.py", line 27, in <module>
+    from ....lib.streaming.chat import ChatCompletionStreamManager, AsyncChatCompletionStreamManager
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\lib\streaming\chat\__init__.py", line 21, in <module>
+    from ._completions import (
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\openai\lib\streaming\chat\_completions.py", line 8, in <module>
+    from jiter import from_json
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\jiter\__init__.py", line 1, in <module>
+    from .jiter import *
+ModuleNotFoundError: No module named 'jiter.jiter'
+
+2024-11-15 12:53:43,766 - fastapi - INFO - All required dependencies are installed
+2024-11-15 12:53:43,766 - fastapi - INFO - All required dependencies are installed
+2024-11-15 12:53:43,767 - fastapi - INFO - Starting Research API Server...
+2024-11-15 12:53:43,767 - fastapi - INFO - Starting Research API Server...
+2024-11-15 12:53:43,769 - fastapi - INFO - Starting imports...
+2024-11-15 12:53:43,769 - fastapi - INFO - Starting imports...
+2024-11-15 12:53:43,778 - fastapi - INFO - Models imported successfully
+2024-11-15 12:53:43,778 - fastapi - INFO - Models imported successfully
+2024-11-15 12:53:43,779 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 12:53:43,779 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 12:53:43,787 - api.core.config - INFO - Environment configuration loaded successfully
+2024-11-15 12:53:43,792 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-15 12:53:43,793 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-15 12:53:43,815 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-15 12:53:43,823 - api.core.session_manager - INFO - Initializing Research Session Manager...
+2024-11-15 12:53:44,330 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 12:53:44,331 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 12:53:44,331 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 12:53:44,480 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 12:53:44,481 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 12:53:44,481 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 12:53:44,482 - fastapi - INFO - Importing service components...
+2024-11-15 12:53:44,482 - fastapi - INFO - Importing service components...
+2024-11-15 12:53:45,098 - api.service - INFO - GCS client initialized successfully
+2024-11-15 12:53:45,103 - fastapi - INFO - Service functions imported successfully
+2024-11-15 12:53:45,103 - fastapi - INFO - Service functions imported successfully
+2024-11-15 12:53:45,104 - fastapi - INFO - Importing main app...
+2024-11-15 12:53:45,104 - fastapi - INFO - Importing main app...
+2024-11-15 12:53:45,950 - api.agents.rag_agent - INFO - Initializing RAG Agent...
+2024-11-15 12:53:45,952 - fastapi - ERROR - Failed to start server: module 'openai' has no attribute 'OpenAI'
+2024-11-15 12:53:45,952 - fastapi - ERROR - Failed to start server: module 'openai' has no attribute 'OpenAI'
+2024-11-15 12:53:45,953 - fastapi - ERROR - Error type: <class 'AttributeError'>
+2024-11-15 12:53:45,953 - fastapi - ERROR - Error type: <class 'AttributeError'>
+2024-11-15 12:53:45,953 - fastapi - ERROR - Error location: C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py
+2024-11-15 12:53:45,953 - fastapi - ERROR - Error location: C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py
+2024-11-15 12:53:45,954 - fastapi - ERROR - Error line: 92
+2024-11-15 12:53:45,954 - fastapi - ERROR - Error line: 92
+2024-11-15 12:53:45,954 - fastapi - ERROR - Full traceback:
+2024-11-15 12:53:45,954 - fastapi - ERROR - Full traceback:
+2024-11-15 12:53:45,978 - fastapi - ERROR - Traceback (most recent call last):
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py", line 92, in main
+    from api.main import app
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\main.py", line 2, in <module>
+    from .routers import router  # Update relative import
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\routers.py", line 6, in <module>
+    from .graphs.research_graph import research_graph
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\graphs\research_graph.py", line 175, in <module>
+    research_graph = ResearchGraph()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\graphs\research_graph.py", line 22, in __init__
+    "rag": RAGAgent(),
+           ^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\agents\rag_agent.py", line 22, in __init__
+    self.embeddings = OpenAIEmbeddings(
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\v1\main.py", line 339, in __init__
+    values, fields_set, validation_error = validate_model(__pydantic_self__.__class__, data)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\v1\main.py", line 1102, in validate_model
+    values = validator(cls_, values)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\embeddings\base.py", line 342, in validate_environment
+    values["client"] = openai.OpenAI(
+                       ^^^^^^^^^^^^^
+AttributeError: module 'openai' has no attribute 'OpenAI'
+
+2024-11-15 12:53:45,978 - fastapi - ERROR - Traceback (most recent call last):
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py", line 92, in main
+    from api.main import app
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\main.py", line 2, in <module>
+    from .routers import router  # Update relative import
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\routers.py", line 6, in <module>
+    from .graphs.research_graph import research_graph
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\graphs\research_graph.py", line 175, in <module>
+    research_graph = ResearchGraph()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\graphs\research_graph.py", line 22, in __init__
+    "rag": RAGAgent(),
+           ^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\agents\rag_agent.py", line 22, in __init__
+    self.embeddings = OpenAIEmbeddings(
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\v1\main.py", line 339, in __init__
+    values, fields_set, validation_error = validate_model(__pydantic_self__.__class__, data)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\v1\main.py", line 1102, in validate_model
+    values = validator(cls_, values)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\embeddings\base.py", line 342, in validate_environment
+    values["client"] = openai.OpenAI(
+                       ^^^^^^^^^^^^^
+AttributeError: module 'openai' has no attribute 'OpenAI'
+
+2024-11-15 13:17:08,328 - fastapi - INFO - All required dependencies are installed
+2024-11-15 13:17:08,328 - fastapi - INFO - All required dependencies are installed
+2024-11-15 13:17:08,328 - fastapi - INFO - Starting Research API Server...
+2024-11-15 13:17:08,328 - fastapi - INFO - Starting Research API Server...
+2024-11-15 13:17:08,328 - fastapi - INFO - Starting imports...
+2024-11-15 13:17:08,328 - fastapi - INFO - Starting imports...
+2024-11-15 13:17:08,344 - fastapi - INFO - Models imported successfully
+2024-11-15 13:17:08,344 - fastapi - INFO - Models imported successfully
+2024-11-15 13:17:08,346 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 13:17:08,346 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 13:17:08,346 - api.core.config - INFO - Environment configuration loaded successfully
+2024-11-15 13:17:08,360 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-15 13:17:08,360 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-15 13:17:08,386 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-15 13:17:08,395 - api.core.session_manager - INFO - Initializing Research Session Manager...
+2024-11-15 13:17:09,561 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 13:17:09,564 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 13:17:09,564 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 13:17:09,935 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 13:17:09,935 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 13:17:09,935 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 13:17:09,936 - fastapi - INFO - Importing service components...
+2024-11-15 13:17:09,936 - fastapi - INFO - Importing service components...
+2024-11-15 13:17:10,621 - api.service - INFO - GCS client initialized successfully
+2024-11-15 13:17:10,630 - fastapi - INFO - Service functions imported successfully
+2024-11-15 13:17:10,630 - fastapi - INFO - Service functions imported successfully
+2024-11-15 13:17:10,630 - fastapi - INFO - Importing main app...
+2024-11-15 13:17:10,630 - fastapi - INFO - Importing main app...
+2024-11-15 13:17:11,487 - api.agents.rag_agent - INFO - Initializing RAG Agent...
+2024-11-15 13:17:13,387 - fastapi - INFO - Main app imported successfully
+2024-11-15 13:17:13,387 - fastapi - INFO - Main app imported successfully
+2024-11-15 13:17:13,387 - fastapi - INFO - Starting uvicorn server...
+2024-11-15 13:17:13,387 - fastapi - INFO - Starting uvicorn server...
+2024-11-15 13:27:00,687 - fastapi - INFO - All required dependencies are installed
+2024-11-15 13:27:00,687 - fastapi - INFO - All required dependencies are installed
+2024-11-15 13:27:00,692 - fastapi - INFO - Starting Research API Server...
+2024-11-15 13:27:00,692 - fastapi - INFO - Starting Research API Server...
+2024-11-15 13:27:00,694 - fastapi - INFO - Starting imports...
+2024-11-15 13:27:00,694 - fastapi - INFO - Starting imports...
+2024-11-15 13:27:00,728 - fastapi - INFO - Models imported successfully
+2024-11-15 13:27:00,728 - fastapi - INFO - Models imported successfully
+2024-11-15 13:27:00,730 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 13:27:00,730 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 13:27:00,756 - api.core.config - INFO - Environment configuration loaded successfully
+2024-11-15 13:27:00,766 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-15 13:27:00,769 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-15 13:27:00,838 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-15 13:27:00,860 - api.core.session_manager - INFO - Initializing Research Session Manager...
+2024-11-15 13:27:05,655 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 13:27:05,656 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 13:27:05,656 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 13:27:06,330 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 13:27:06,331 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 13:27:06,331 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 13:27:06,334 - fastapi - INFO - Importing service components...
+2024-11-15 13:27:06,334 - fastapi - INFO - Importing service components...
+2024-11-15 13:27:07,182 - api.service - INFO - GCS client initialized successfully
+2024-11-15 13:27:07,188 - fastapi - INFO - Service functions imported successfully
+2024-11-15 13:27:07,188 - fastapi - INFO - Service functions imported successfully
+2024-11-15 13:27:07,189 - fastapi - INFO - Importing main app...
+2024-11-15 13:27:07,189 - fastapi - INFO - Importing main app...
+2024-11-15 13:27:07,766 - api.agents.rag_agent - INFO - Initializing RAG Agent...
+2024-11-15 13:27:09,529 - fastapi - INFO - Main app imported successfully
+2024-11-15 13:27:09,529 - fastapi - INFO - Main app imported successfully
+2024-11-15 13:27:09,530 - fastapi - INFO - Starting uvicorn server...
+2024-11-15 13:27:09,530 - fastapi - INFO - Starting uvicorn server...
+2024-11-15 13:43:15,263 - fastapi - INFO - All required dependencies are installed
+2024-11-15 13:43:15,263 - fastapi - INFO - All required dependencies are installed
+2024-11-15 13:43:15,264 - fastapi - INFO - Starting Research API Server...
+2024-11-15 13:43:15,264 - fastapi - INFO - Starting Research API Server...
+2024-11-15 13:43:15,266 - fastapi - INFO - Starting imports...
+2024-11-15 13:43:15,266 - fastapi - INFO - Starting imports...
+2024-11-15 13:43:15,275 - fastapi - INFO - Models imported successfully
+2024-11-15 13:43:15,275 - fastapi - INFO - Models imported successfully
+2024-11-15 13:43:15,276 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 13:43:15,276 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 13:43:15,289 - api.core.config - INFO - Environment configuration loaded successfully
+2024-11-15 13:43:15,301 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-15 13:43:15,303 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-15 13:43:15,333 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-15 13:43:15,343 - api.core.session_manager - INFO - Initializing Research Session Manager...
+2024-11-15 13:43:16,607 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 13:43:16,607 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 13:43:16,607 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 13:43:17,885 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 13:43:17,886 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 13:43:17,886 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 13:43:17,887 - fastapi - INFO - Importing service components...
+2024-11-15 13:43:17,887 - fastapi - INFO - Importing service components...
+2024-11-15 13:43:18,462 - api.service - INFO - GCS client initialized successfully
+2024-11-15 13:43:18,468 - fastapi - INFO - Service functions imported successfully
+2024-11-15 13:43:18,468 - fastapi - INFO - Service functions imported successfully
+2024-11-15 13:43:18,471 - fastapi - INFO - Importing main app...
+2024-11-15 13:43:18,471 - fastapi - INFO - Importing main app...
+2024-11-15 13:43:18,996 - api.agents.rag_agent - INFO - Initializing RAG Agent...
+2024-11-15 13:43:20,855 - fastapi - INFO - Main app imported successfully
+2024-11-15 13:43:20,855 - fastapi - INFO - Main app imported successfully
+2024-11-15 13:43:20,856 - fastapi - INFO - Starting uvicorn server...
+2024-11-15 13:43:20,856 - fastapi - INFO - Starting uvicorn server...
+2024-11-15 13:56:30,604 - fastapi - INFO - All required dependencies are installed
+2024-11-15 13:56:30,604 - fastapi - INFO - All required dependencies are installed
+2024-11-15 13:56:30,605 - fastapi - INFO - Starting Research API Server...
+2024-11-15 13:56:30,605 - fastapi - INFO - Starting Research API Server...
+2024-11-15 13:56:30,606 - fastapi - INFO - Starting imports...
+2024-11-15 13:56:30,606 - fastapi - INFO - Starting imports...
+2024-11-15 13:56:30,616 - fastapi - INFO - Models imported successfully
+2024-11-15 13:56:30,616 - fastapi - INFO - Models imported successfully
+2024-11-15 13:56:30,617 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 13:56:30,617 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 13:56:30,630 - api.core.config - INFO - Environment configuration loaded successfully
+2024-11-15 13:56:30,635 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-15 13:56:30,637 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-15 13:56:30,677 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-15 13:56:30,689 - api.core.session_manager - INFO - Initializing Research Session Manager...
+2024-11-15 13:56:31,385 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 13:56:31,386 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 13:56:31,386 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 13:56:31,501 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 13:56:31,502 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 13:56:31,502 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 13:56:31,503 - fastapi - INFO - Importing service components...
+2024-11-15 13:56:31,503 - fastapi - INFO - Importing service components...
+2024-11-15 13:56:32,389 - api.service - INFO - GCS client initialized successfully
+2024-11-15 13:56:32,401 - fastapi - INFO - Service functions imported successfully
+2024-11-15 13:56:32,401 - fastapi - INFO - Service functions imported successfully
+2024-11-15 13:56:32,403 - fastapi - INFO - Importing main app...
+2024-11-15 13:56:32,403 - fastapi - INFO - Importing main app...
+2024-11-15 13:56:33,167 - api.agents.rag_agent - INFO - Initializing RAG Agent...
+2024-11-15 13:56:35,233 - fastapi - INFO - Main app imported successfully
+2024-11-15 13:56:35,233 - fastapi - INFO - Main app imported successfully
+2024-11-15 13:56:35,234 - fastapi - INFO - Starting uvicorn server...
+2024-11-15 13:56:35,234 - fastapi - INFO - Starting uvicorn server...
+2024-11-15 14:09:03,810 - fastapi - INFO - All required dependencies are installed
+2024-11-15 14:09:03,810 - fastapi - INFO - All required dependencies are installed
+2024-11-15 14:09:03,811 - fastapi - INFO - Starting Research API Server...
+2024-11-15 14:09:03,811 - fastapi - INFO - Starting Research API Server...
+2024-11-15 14:09:03,812 - fastapi - INFO - Starting imports...
+2024-11-15 14:09:03,812 - fastapi - INFO - Starting imports...
+2024-11-15 14:09:03,824 - fastapi - INFO - Models imported successfully
+2024-11-15 14:09:03,824 - fastapi - INFO - Models imported successfully
+2024-11-15 14:09:03,826 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 14:09:03,826 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 14:09:03,836 - api.core.config - INFO - Environment configuration loaded successfully
+2024-11-15 14:09:03,842 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-15 14:09:03,843 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-15 14:09:03,872 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-15 14:09:03,880 - api.core.session_manager - INFO - Initializing Research Session Manager...
+2024-11-15 14:09:05,976 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 14:09:05,976 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 14:09:05,976 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 14:09:06,076 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 14:09:06,078 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 14:09:06,078 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 14:09:06,080 - fastapi - INFO - Importing service components...
+2024-11-15 14:09:06,080 - fastapi - INFO - Importing service components...
+2024-11-15 14:09:06,737 - api.service - INFO - Using credentials from: project3-439417-441ae24dff81.json
+2024-11-15 14:09:06,739 - api.service - INFO - Using credentials from: project3-439417-441ae24dff81.json
+2024-11-15 14:09:07,170 - api.service - INFO - Service account email: service-75164446325@gs-project-accounts.iam.gserviceaccount.com
+2024-11-15 14:09:07,174 - api.service - INFO - GCS client initialized successfully
+2024-11-15 14:09:07,197 - fastapi - INFO - Service functions imported successfully
+2024-11-15 14:09:07,197 - fastapi - INFO - Service functions imported successfully
+2024-11-15 14:09:07,200 - fastapi - INFO - Importing main app...
+2024-11-15 14:09:07,200 - fastapi - INFO - Importing main app...
+2024-11-15 14:09:07,859 - api.agents.rag_agent - INFO - Initializing RAG Agent...
+2024-11-15 14:09:09,562 - fastapi - INFO - Main app imported successfully
+2024-11-15 14:09:09,562 - fastapi - INFO - Main app imported successfully
+2024-11-15 14:09:09,565 - fastapi - INFO - Starting uvicorn server...
+2024-11-15 14:09:09,565 - fastapi - INFO - Starting uvicorn server...
+2024-11-15 14:33:52,126 - fastapi - INFO - All required dependencies are installed
+2024-11-15 14:33:52,126 - fastapi - INFO - All required dependencies are installed
+2024-11-15 14:33:52,128 - fastapi - INFO - Starting Research API Server...
+2024-11-15 14:33:52,128 - fastapi - INFO - Starting Research API Server...
+2024-11-15 14:33:52,130 - fastapi - INFO - Starting imports...
+2024-11-15 14:33:52,130 - fastapi - INFO - Starting imports...
+2024-11-15 14:33:52,144 - fastapi - INFO - Models imported successfully
+2024-11-15 14:33:52,144 - fastapi - INFO - Models imported successfully
+2024-11-15 14:33:52,146 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 14:33:52,146 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 14:33:52,160 - api.core.config - INFO - Environment configuration loaded successfully
+2024-11-15 14:33:52,166 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-15 14:33:52,167 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-15 14:33:52,211 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-15 14:33:52,226 - api.core.session_manager - INFO - Initializing Research Session Manager...
+2024-11-15 14:33:54,123 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 14:33:54,124 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 14:33:54,124 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 14:33:54,336 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 14:33:54,338 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 14:33:54,338 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 14:33:54,339 - fastapi - INFO - Importing service components...
+2024-11-15 14:33:54,339 - fastapi - INFO - Importing service components...
+2024-11-15 14:33:55,136 - api.service - INFO - GCS client initialized successfully
+2024-11-15 14:33:55,143 - fastapi - INFO - Service functions imported successfully
+2024-11-15 14:33:55,143 - fastapi - INFO - Service functions imported successfully
+2024-11-15 14:33:55,145 - fastapi - INFO - Importing main app...
+2024-11-15 14:33:55,145 - fastapi - INFO - Importing main app...
+2024-11-15 14:33:55,905 - api.agents.rag_agent - INFO - Initializing RAG Agent...
+2024-11-15 14:33:57,734 - fastapi - INFO - Main app imported successfully
+2024-11-15 14:33:57,734 - fastapi - INFO - Main app imported successfully
+2024-11-15 14:33:57,736 - fastapi - INFO - Starting uvicorn server...
+2024-11-15 14:33:57,736 - fastapi - INFO - Starting uvicorn server...
+2024-11-15 14:46:28,903 - fastapi - INFO - All required dependencies are installed
+2024-11-15 14:46:28,903 - fastapi - INFO - All required dependencies are installed
+2024-11-15 14:46:28,906 - fastapi - INFO - Starting Research API Server...
+2024-11-15 14:46:28,906 - fastapi - INFO - Starting Research API Server...
+2024-11-15 14:46:28,906 - fastapi - INFO - Starting imports...
+2024-11-15 14:46:28,906 - fastapi - INFO - Starting imports...
+2024-11-15 14:46:28,917 - fastapi - INFO - Models imported successfully
+2024-11-15 14:46:28,917 - fastapi - INFO - Models imported successfully
+2024-11-15 14:46:28,919 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 14:46:28,919 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 14:46:28,930 - api.core.config - INFO - Environment configuration loaded successfully
+2024-11-15 14:46:28,934 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-15 14:46:28,935 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-15 14:46:28,971 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-15 14:46:28,991 - api.core.session_manager - INFO - Initializing Research Session Manager...
+2024-11-15 14:46:30,971 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 14:46:30,972 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 14:46:30,972 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 14:46:31,120 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 14:46:31,121 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 14:46:31,121 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 14:46:31,122 - fastapi - INFO - Importing service components...
+2024-11-15 14:46:31,122 - fastapi - INFO - Importing service components...
+2024-11-15 14:46:31,898 - api.service - INFO - GCS client initialized successfully
+2024-11-15 14:46:31,906 - fastapi - INFO - Service functions imported successfully
+2024-11-15 14:46:31,906 - fastapi - INFO - Service functions imported successfully
+2024-11-15 14:46:31,908 - fastapi - INFO - Importing main app...
+2024-11-15 14:46:31,908 - fastapi - INFO - Importing main app...
+2024-11-15 14:46:32,621 - api.agents.rag_agent - INFO - Initializing RAG Agent...
+2024-11-15 14:46:34,366 - fastapi - INFO - Main app imported successfully
+2024-11-15 14:46:34,366 - fastapi - INFO - Main app imported successfully
+2024-11-15 14:46:34,368 - fastapi - INFO - Starting uvicorn server...
+2024-11-15 14:46:34,368 - fastapi - INFO - Starting uvicorn server...
+2024-11-15 15:03:41,967 - fastapi - INFO - All required dependencies are installed
+2024-11-15 15:03:41,967 - fastapi - INFO - All required dependencies are installed
+2024-11-15 15:03:41,969 - fastapi - INFO - Starting Research API Server...
+2024-11-15 15:03:41,969 - fastapi - INFO - Starting Research API Server...
+2024-11-15 15:03:41,970 - fastapi - INFO - Starting imports...
+2024-11-15 15:03:41,970 - fastapi - INFO - Starting imports...
+2024-11-15 15:03:41,981 - fastapi - INFO - Models imported successfully
+2024-11-15 15:03:41,981 - fastapi - INFO - Models imported successfully
+2024-11-15 15:03:41,982 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 15:03:41,982 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 15:03:41,994 - api.core.config - INFO - Environment configuration loaded successfully
+2024-11-15 15:03:41,998 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-15 15:03:41,999 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-15 15:03:42,038 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-15 15:03:42,049 - api.core.session_manager - INFO - Initializing Research Session Manager...
+2024-11-15 15:03:44,914 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 15:03:44,915 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 15:03:44,915 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 15:03:46,346 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 15:03:46,347 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 15:03:46,347 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 15:03:46,347 - fastapi - INFO - Importing service components...
+2024-11-15 15:03:46,347 - fastapi - INFO - Importing service components...
+2024-11-15 15:03:47,207 - api.service - INFO - GCS client initialized successfully
+2024-11-15 15:03:47,215 - fastapi - INFO - Service functions imported successfully
+2024-11-15 15:03:47,215 - fastapi - INFO - Service functions imported successfully
+2024-11-15 15:03:47,216 - fastapi - INFO - Importing main app...
+2024-11-15 15:03:47,216 - fastapi - INFO - Importing main app...
+2024-11-15 15:03:47,904 - api.agents.rag_agent - INFO - Initializing RAG Agent...
+2024-11-15 15:03:49,429 - fastapi - INFO - Main app imported successfully
+2024-11-15 15:03:49,429 - fastapi - INFO - Main app imported successfully
+2024-11-15 15:03:49,430 - fastapi - INFO - Starting uvicorn server...
+2024-11-15 15:03:49,430 - fastapi - INFO - Starting uvicorn server...
+2024-11-15 15:14:24,158 - fastapi - ERROR - Failed to start server: [WinError 3] The system cannot find the path specified: 'C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\SQLAlchemy-2.0.36.dist-info'
+2024-11-15 15:14:24,158 - fastapi - ERROR - Failed to start server: [WinError 3] The system cannot find the path specified: 'C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\SQLAlchemy-2.0.36.dist-info'
+2024-11-15 15:14:24,161 - fastapi - ERROR - Error type: <class 'FileNotFoundError'>
+2024-11-15 15:14:24,161 - fastapi - ERROR - Error type: <class 'FileNotFoundError'>
+2024-11-15 15:14:24,162 - fastapi - ERROR - Error location: C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py
+2024-11-15 15:14:24,162 - fastapi - ERROR - Error location: C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py
+2024-11-15 15:14:24,163 - fastapi - ERROR - Error line: 97
+2024-11-15 15:14:24,163 - fastapi - ERROR - Error line: 97
+2024-11-15 15:14:24,164 - fastapi - ERROR - Full traceback:
+2024-11-15 15:14:24,164 - fastapi - ERROR - Full traceback:
+2024-11-15 15:14:24,198 - fastapi - ERROR - Traceback (most recent call last):
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py", line 97, in main
+    uvicorn.run(
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\uvicorn\main.py", line 574, in run
+    ChangeReload(config, target=server.run, sockets=[sock]).run()
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\uvicorn\supervisors\basereload.py", line 52, in run
+    for changes in self:
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\uvicorn\supervisors\basereload.py", line 71, in __next__
+    return self.should_restart()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\uvicorn\supervisors\statreload.py", line 31, in should_restart
+    for file in self.iter_py_files():
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\uvicorn\supervisors\statreload.py", line 51, in iter_py_files
+    for path in list(reload_dir.rglob("*.py")):
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\pathlib.py", line 968, in rglob
+    for p in selector.select_from(self):
+  File "C:\Program Files\Python311\Lib\pathlib.py", line 408, in _select_from
+    for p in successor_select(starting_point, is_dir, exists, scandir):
+  File "C:\Program Files\Python311\Lib\pathlib.py", line 355, in _select_from
+    with scandir(parent_path) as scandir_it:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\pathlib.py", line 938, in _scandir
+    return os.scandir(self)
+           ^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\SQLAlchemy-2.0.36.dist-info'
+
+2024-11-15 15:14:24,198 - fastapi - ERROR - Traceback (most recent call last):
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py", line 97, in main
+    uvicorn.run(
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\uvicorn\main.py", line 574, in run
+    ChangeReload(config, target=server.run, sockets=[sock]).run()
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\uvicorn\supervisors\basereload.py", line 52, in run
+    for changes in self:
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\uvicorn\supervisors\basereload.py", line 71, in __next__
+    return self.should_restart()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\uvicorn\supervisors\statreload.py", line 31, in should_restart
+    for file in self.iter_py_files():
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\uvicorn\supervisors\statreload.py", line 51, in iter_py_files
+    for path in list(reload_dir.rglob("*.py")):
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\pathlib.py", line 968, in rglob
+    for p in selector.select_from(self):
+  File "C:\Program Files\Python311\Lib\pathlib.py", line 408, in _select_from
+    for p in successor_select(starting_point, is_dir, exists, scandir):
+  File "C:\Program Files\Python311\Lib\pathlib.py", line 355, in _select_from
+    with scandir(parent_path) as scandir_it:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\pathlib.py", line 938, in _scandir
+    return os.scandir(self)
+           ^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\SQLAlchemy-2.0.36.dist-info'
+
+2024-11-15 15:16:31,602 - fastapi - INFO - All required dependencies are installed
+2024-11-15 15:16:31,602 - fastapi - INFO - All required dependencies are installed
+2024-11-15 15:16:31,604 - fastapi - INFO - Starting Research API Server...
+2024-11-15 15:16:31,604 - fastapi - INFO - Starting Research API Server...
+2024-11-15 15:16:31,605 - fastapi - INFO - Starting imports...
+2024-11-15 15:16:31,605 - fastapi - INFO - Starting imports...
+2024-11-15 15:16:31,619 - fastapi - INFO - Models imported successfully
+2024-11-15 15:16:31,619 - fastapi - INFO - Models imported successfully
+2024-11-15 15:16:31,621 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 15:16:31,621 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 15:16:31,638 - api.core.config - INFO - Environment configuration loaded successfully
+2024-11-15 15:16:31,666 - api.core.session_manager - INFO - Initializing Research Session Manager...
+2024-11-15 15:16:31,669 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-15 15:16:31,673 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-15 15:16:31,719 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-15 15:16:34,613 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 15:16:34,615 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 15:16:34,615 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 15:16:34,617 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-15 15:16:34,620 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-15 15:16:34,620 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-15 15:16:34,621 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 15:16:34,621 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 15:16:34,621 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 15:16:34,623 - fastapi - INFO - Importing service components...
+2024-11-15 15:16:34,623 - fastapi - INFO - Importing service components...
+2024-11-15 15:16:35,681 - api.service - INFO - GCS client initialized successfully
+2024-11-15 15:16:35,693 - fastapi - INFO - Service functions imported successfully
+2024-11-15 15:16:35,693 - fastapi - INFO - Service functions imported successfully
+2024-11-15 15:16:35,695 - fastapi - INFO - Importing main app...
+2024-11-15 15:16:35,695 - fastapi - INFO - Importing main app...
+2024-11-15 15:16:36,353 - fastapi - ERROR - Failed to start server: The `__modify_schema__` method is not supported in Pydantic v2. Use `__get_pydantic_json_schema__` instead in class `SecretStr`.
+
+For further information visit https://errors.pydantic.dev/2.9/u/custom-json-schema
+2024-11-15 15:16:36,353 - fastapi - ERROR - Failed to start server: The `__modify_schema__` method is not supported in Pydantic v2. Use `__get_pydantic_json_schema__` instead in class `SecretStr`.
+
+For further information visit https://errors.pydantic.dev/2.9/u/custom-json-schema
+2024-11-15 15:16:36,355 - fastapi - ERROR - Error type: <class 'pydantic.errors.PydanticUserError'>
+2024-11-15 15:16:36,355 - fastapi - ERROR - Error type: <class 'pydantic.errors.PydanticUserError'>
+2024-11-15 15:16:36,356 - fastapi - ERROR - Error location: C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py
+2024-11-15 15:16:36,356 - fastapi - ERROR - Error location: C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py
+2024-11-15 15:16:36,358 - fastapi - ERROR - Error line: 92
+2024-11-15 15:16:36,358 - fastapi - ERROR - Error line: 92
+2024-11-15 15:16:36,360 - fastapi - ERROR - Full traceback:
+2024-11-15 15:16:36,360 - fastapi - ERROR - Full traceback:
+2024-11-15 15:16:36,371 - fastapi - ERROR - Traceback (most recent call last):
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py", line 92, in main
+    from api.main import app
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\main.py", line 2, in <module>
+    from .routers import router  # Update relative import
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\routers.py", line 6, in <module>
+    from .graphs.research_graph import research_graph
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\graphs\research_graph.py", line 4, in <module>
+    from ..agents.rag_agent import RAGAgent
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\agents\__init__.py", line 1, in <module>
+    from .rag_agent import RAGAgent
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\agents\rag_agent.py", line 1, in <module>
+    from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\__init__.py", line 1, in <module>
+    from langchain_openai.chat_models import AzureChatOpenAI, ChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\__init__.py", line 1, in <module>
+    from langchain_openai.chat_models.azure import AzureChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\azure.py", line 41, in <module>
+    from langchain_openai.chat_models.base import BaseChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 379, in <module>
+    class BaseChatOpenAI(BaseChatModel):
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_model_construction.py", line 224, in __new__
+    complete_model_class(
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_model_construction.py", line 577, in complete_model_class
+    schema = cls.__get_pydantic_core_schema__(cls, handler)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\main.py", line 671, in __get_pydantic_core_schema__
+    return handler(source)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 83, in __call__
+    schema = self._handler(source_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 655, in generate_schema
+    schema = self._generate_schema_inner(obj)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 924, in _generate_schema_inner
+    return self._model_schema(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 739, in _model_schema
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 739, in <dictcomp>
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1115, in _generate_md_field_schema
+    common_field = self._common_field_schema(name, field_info, decorators)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1308, in _common_field_schema
+    schema = self._apply_annotations(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 2107, in _apply_annotations
+    schema = get_inner_schema(source_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 83, in __call__
+    schema = self._handler(source_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 2088, in inner_handler
+    schema = self._generate_schema_inner(obj)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 929, in _generate_schema_inner
+    return self.match_type(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1029, in match_type
+    return self._match_generic_type(obj, origin)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1058, in _match_generic_type
+    return self._union_schema(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1378, in _union_schema
+    choices.append(self.generate_schema(arg))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 657, in generate_schema
+    metadata_js_function = _extract_get_pydantic_json_schema(obj, schema)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 2447, in _extract_get_pydantic_json_schema
+    raise PydanticUserError(
+pydantic.errors.PydanticUserError: The `__modify_schema__` method is not supported in Pydantic v2. Use `__get_pydantic_json_schema__` instead in class `SecretStr`.
+
+For further information visit https://errors.pydantic.dev/2.9/u/custom-json-schema
+
+2024-11-15 15:16:36,371 - fastapi - ERROR - Traceback (most recent call last):
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py", line 92, in main
+    from api.main import app
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\main.py", line 2, in <module>
+    from .routers import router  # Update relative import
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\routers.py", line 6, in <module>
+    from .graphs.research_graph import research_graph
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\graphs\research_graph.py", line 4, in <module>
+    from ..agents.rag_agent import RAGAgent
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\agents\__init__.py", line 1, in <module>
+    from .rag_agent import RAGAgent
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\agents\rag_agent.py", line 1, in <module>
+    from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\__init__.py", line 1, in <module>
+    from langchain_openai.chat_models import AzureChatOpenAI, ChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\__init__.py", line 1, in <module>
+    from langchain_openai.chat_models.azure import AzureChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\azure.py", line 41, in <module>
+    from langchain_openai.chat_models.base import BaseChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 379, in <module>
+    class BaseChatOpenAI(BaseChatModel):
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_model_construction.py", line 224, in __new__
+    complete_model_class(
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_model_construction.py", line 577, in complete_model_class
+    schema = cls.__get_pydantic_core_schema__(cls, handler)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\main.py", line 671, in __get_pydantic_core_schema__
+    return handler(source)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 83, in __call__
+    schema = self._handler(source_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 655, in generate_schema
+    schema = self._generate_schema_inner(obj)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 924, in _generate_schema_inner
+    return self._model_schema(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 739, in _model_schema
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 739, in <dictcomp>
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1115, in _generate_md_field_schema
+    common_field = self._common_field_schema(name, field_info, decorators)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1308, in _common_field_schema
+    schema = self._apply_annotations(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 2107, in _apply_annotations
+    schema = get_inner_schema(source_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 83, in __call__
+    schema = self._handler(source_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 2088, in inner_handler
+    schema = self._generate_schema_inner(obj)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 929, in _generate_schema_inner
+    return self.match_type(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1029, in match_type
+    return self._match_generic_type(obj, origin)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1058, in _match_generic_type
+    return self._union_schema(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1378, in _union_schema
+    choices.append(self.generate_schema(arg))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 657, in generate_schema
+    metadata_js_function = _extract_get_pydantic_json_schema(obj, schema)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 2447, in _extract_get_pydantic_json_schema
+    raise PydanticUserError(
+pydantic.errors.PydanticUserError: The `__modify_schema__` method is not supported in Pydantic v2. Use `__get_pydantic_json_schema__` instead in class `SecretStr`.
+
+For further information visit https://errors.pydantic.dev/2.9/u/custom-json-schema
+
+2024-11-15 15:16:49,945 - fastapi - INFO - All required dependencies are installed
+2024-11-15 15:16:49,945 - fastapi - INFO - All required dependencies are installed
+2024-11-15 15:16:49,946 - fastapi - INFO - Starting Research API Server...
+2024-11-15 15:16:49,946 - fastapi - INFO - Starting Research API Server...
+2024-11-15 15:16:49,947 - fastapi - INFO - Starting imports...
+2024-11-15 15:16:49,947 - fastapi - INFO - Starting imports...
+2024-11-15 15:16:49,956 - fastapi - INFO - Models imported successfully
+2024-11-15 15:16:49,956 - fastapi - INFO - Models imported successfully
+2024-11-15 15:16:49,958 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 15:16:49,958 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 15:16:49,972 - api.core.config - INFO - Environment configuration loaded successfully
+2024-11-15 15:16:49,992 - api.core.session_manager - INFO - Initializing Research Session Manager...
+2024-11-15 15:16:49,995 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-15 15:16:49,997 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-15 15:16:50,041 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-15 15:16:50,558 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 15:16:50,560 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 15:16:50,560 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 15:16:50,563 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-15 15:16:50,564 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-15 15:16:50,565 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-15 15:16:50,565 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 15:16:50,566 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 15:16:50,566 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 15:16:50,568 - fastapi - INFO - Importing service components...
+2024-11-15 15:16:50,568 - fastapi - INFO - Importing service components...
+2024-11-15 15:16:51,584 - api.service - INFO - GCS client initialized successfully
+2024-11-15 15:16:51,599 - fastapi - INFO - Service functions imported successfully
+2024-11-15 15:16:51,599 - fastapi - INFO - Service functions imported successfully
+2024-11-15 15:16:51,601 - fastapi - INFO - Importing main app...
+2024-11-15 15:16:51,601 - fastapi - INFO - Importing main app...
+2024-11-15 15:16:52,207 - fastapi - ERROR - Failed to start server: The `__modify_schema__` method is not supported in Pydantic v2. Use `__get_pydantic_json_schema__` instead in class `SecretStr`.
+
+For further information visit https://errors.pydantic.dev/2.9/u/custom-json-schema
+2024-11-15 15:16:52,207 - fastapi - ERROR - Failed to start server: The `__modify_schema__` method is not supported in Pydantic v2. Use `__get_pydantic_json_schema__` instead in class `SecretStr`.
+
+For further information visit https://errors.pydantic.dev/2.9/u/custom-json-schema
+2024-11-15 15:16:52,212 - fastapi - ERROR - Error type: <class 'pydantic.errors.PydanticUserError'>
+2024-11-15 15:16:52,212 - fastapi - ERROR - Error type: <class 'pydantic.errors.PydanticUserError'>
+2024-11-15 15:16:52,214 - fastapi - ERROR - Error location: C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py
+2024-11-15 15:16:52,214 - fastapi - ERROR - Error location: C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py
+2024-11-15 15:16:52,216 - fastapi - ERROR - Error line: 92
+2024-11-15 15:16:52,216 - fastapi - ERROR - Error line: 92
+2024-11-15 15:16:52,217 - fastapi - ERROR - Full traceback:
+2024-11-15 15:16:52,217 - fastapi - ERROR - Full traceback:
+2024-11-15 15:16:52,224 - fastapi - ERROR - Traceback (most recent call last):
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py", line 92, in main
+    from api.main import app
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\main.py", line 2, in <module>
+    from .routers import router  # Update relative import
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\routers.py", line 6, in <module>
+    from .graphs.research_graph import research_graph
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\graphs\research_graph.py", line 4, in <module>
+    from ..agents.rag_agent import RAGAgent
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\agents\__init__.py", line 1, in <module>
+    from .rag_agent import RAGAgent
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\agents\rag_agent.py", line 1, in <module>
+    from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\__init__.py", line 1, in <module>
+    from langchain_openai.chat_models import AzureChatOpenAI, ChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\__init__.py", line 1, in <module>
+    from langchain_openai.chat_models.azure import AzureChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\azure.py", line 41, in <module>
+    from langchain_openai.chat_models.base import BaseChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 379, in <module>
+    class BaseChatOpenAI(BaseChatModel):
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_model_construction.py", line 224, in __new__
+    complete_model_class(
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_model_construction.py", line 577, in complete_model_class
+    schema = cls.__get_pydantic_core_schema__(cls, handler)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\main.py", line 671, in __get_pydantic_core_schema__
+    return handler(source)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 83, in __call__
+    schema = self._handler(source_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 655, in generate_schema
+    schema = self._generate_schema_inner(obj)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 924, in _generate_schema_inner
+    return self._model_schema(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 739, in _model_schema
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 739, in <dictcomp>
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1115, in _generate_md_field_schema
+    common_field = self._common_field_schema(name, field_info, decorators)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1308, in _common_field_schema
+    schema = self._apply_annotations(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 2107, in _apply_annotations
+    schema = get_inner_schema(source_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 83, in __call__
+    schema = self._handler(source_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 2088, in inner_handler
+    schema = self._generate_schema_inner(obj)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 929, in _generate_schema_inner
+    return self.match_type(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1029, in match_type
+    return self._match_generic_type(obj, origin)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1058, in _match_generic_type
+    return self._union_schema(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1378, in _union_schema
+    choices.append(self.generate_schema(arg))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 657, in generate_schema
+    metadata_js_function = _extract_get_pydantic_json_schema(obj, schema)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 2447, in _extract_get_pydantic_json_schema
+    raise PydanticUserError(
+pydantic.errors.PydanticUserError: The `__modify_schema__` method is not supported in Pydantic v2. Use `__get_pydantic_json_schema__` instead in class `SecretStr`.
+
+For further information visit https://errors.pydantic.dev/2.9/u/custom-json-schema
+
+2024-11-15 15:16:52,224 - fastapi - ERROR - Traceback (most recent call last):
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\run_backend.py", line 92, in main
+    from api.main import app
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\main.py", line 2, in <module>
+    from .routers import router  # Update relative import
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\routers.py", line 6, in <module>
+    from .graphs.research_graph import research_graph
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\graphs\research_graph.py", line 4, in <module>
+    from ..agents.rag_agent import RAGAgent
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\agents\__init__.py", line 1, in <module>
+    from .rag_agent import RAGAgent
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\api\agents\rag_agent.py", line 1, in <module>
+    from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\__init__.py", line 1, in <module>
+    from langchain_openai.chat_models import AzureChatOpenAI, ChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\__init__.py", line 1, in <module>
+    from langchain_openai.chat_models.azure import AzureChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\azure.py", line 41, in <module>
+    from langchain_openai.chat_models.base import BaseChatOpenAI
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 379, in <module>
+    class BaseChatOpenAI(BaseChatModel):
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_model_construction.py", line 224, in __new__
+    complete_model_class(
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_model_construction.py", line 577, in complete_model_class
+    schema = cls.__get_pydantic_core_schema__(cls, handler)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\main.py", line 671, in __get_pydantic_core_schema__
+    return handler(source)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 83, in __call__
+    schema = self._handler(source_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 655, in generate_schema
+    schema = self._generate_schema_inner(obj)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 924, in _generate_schema_inner
+    return self._model_schema(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 739, in _model_schema
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 739, in <dictcomp>
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1115, in _generate_md_field_schema
+    common_field = self._common_field_schema(name, field_info, decorators)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1308, in _common_field_schema
+    schema = self._apply_annotations(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 2107, in _apply_annotations
+    schema = get_inner_schema(source_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 83, in __call__
+    schema = self._handler(source_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 2088, in inner_handler
+    schema = self._generate_schema_inner(obj)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 929, in _generate_schema_inner
+    return self.match_type(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1029, in match_type
+    return self._match_generic_type(obj, origin)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1058, in _match_generic_type
+    return self._union_schema(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 1378, in _union_schema
+    choices.append(self.generate_schema(arg))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 657, in generate_schema
+    metadata_js_function = _extract_get_pydantic_json_schema(obj, schema)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\123ka\OneDrive\Desktop\BIG DATA Assignment4- Streamlit Final\venv\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 2447, in _extract_get_pydantic_json_schema
+    raise PydanticUserError(
+pydantic.errors.PydanticUserError: The `__modify_schema__` method is not supported in Pydantic v2. Use `__get_pydantic_json_schema__` instead in class `SecretStr`.
+
+For further information visit https://errors.pydantic.dev/2.9/u/custom-json-schema
+
+2024-11-15 15:21:52,420 - fastapi - INFO - All required dependencies are installed
+2024-11-15 15:21:52,420 - fastapi - INFO - All required dependencies are installed
+2024-11-15 15:21:52,422 - fastapi - INFO - Starting Research API Server...
+2024-11-15 15:21:52,422 - fastapi - INFO - Starting Research API Server...
+2024-11-15 15:21:52,424 - fastapi - INFO - Starting imports...
+2024-11-15 15:21:52,424 - fastapi - INFO - Starting imports...
+2024-11-15 15:21:52,434 - fastapi - INFO - Models imported successfully
+2024-11-15 15:21:52,434 - fastapi - INFO - Models imported successfully
+2024-11-15 15:21:52,435 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 15:21:52,435 - fastapi - INFO - Initializing Pinecone...
+2024-11-15 15:21:52,451 - api.core.config - INFO - Environment configuration loaded successfully
+2024-11-15 15:21:52,470 - api.core.session_manager - INFO - Initializing Research Session Manager...
+2024-11-15 15:21:52,473 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-15 15:21:52,474 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-15 15:21:52,522 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-15 15:21:53,208 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 15:21:53,212 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 15:21:53,212 - fastapi - INFO - Pinecone initialized successfully
+2024-11-15 15:21:53,214 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\123ka\\OneDrive\\Desktop\\BIG DATA Assignment4- Streamlit Final\\venv\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-15 15:21:53,216 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-15 15:21:53,217 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-15 15:21:53,218 - api.core.pinecone_client - INFO - Pinecone initialization successful
+2024-11-15 15:21:53,218 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 15:21:53,218 - fastapi - INFO - Pinecone index retrieved successfully
+2024-11-15 15:21:53,219 - fastapi - INFO - Importing service components...
+2024-11-15 15:21:53,219 - fastapi - INFO - Importing service components...
+2024-11-15 15:21:53,437 - api.service - INFO - GCS client initialized successfully
+2024-11-15 15:21:53,446 - fastapi - INFO - Service functions imported successfully
+2024-11-15 15:21:53,446 - fastapi - INFO - Service functions imported successfully
+2024-11-15 15:21:53,447 - fastapi - INFO - Importing main app...
+2024-11-15 15:21:53,447 - fastapi - INFO - Importing main app...
+2024-11-15 15:21:54,739 - api.agents.rag_agent - INFO - Initializing RAG Agent...
+2024-11-15 15:21:56,153 - fastapi - INFO - Main app imported successfully
+2024-11-15 15:21:56,153 - fastapi - INFO - Main app imported successfully
+2024-11-15 15:21:56,155 - fastapi - INFO - Starting uvicorn server...
+2024-11-15 15:21:56,155 - fastapi - INFO - Starting uvicorn server...
