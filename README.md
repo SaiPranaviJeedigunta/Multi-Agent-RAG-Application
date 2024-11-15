@@ -85,6 +85,10 @@ This project automates the ingestion, processing, and retrieval of publication d
    - Simple yet powerful interface for research interaction and result export.
 
 ---
+## Demo Video
+Available in the codelabs document
+
+---
 
 ## How to Run the Application Locally
 
