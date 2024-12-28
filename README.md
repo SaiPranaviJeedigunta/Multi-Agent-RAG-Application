@@ -1,4 +1,4 @@
-# Assignment-4
+# ResearchSphere: End-to-End Document Research
 
 ## Objective
 Build an end-to-end research tool using an Airflow pipeline for document processing, vector storage with Pinecone, and a multi-agent research system powered by LangGraph. The system enables efficient document-based research, query answering, and exportable findings.
